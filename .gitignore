@@ -1,0 +1,17 @@
+# System and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+# Dependencies and generated artifacts
+node_modules/
+dist/
+build/
+.gradle/
+*.apk
+*.aab
+*.log
+# Credentials
+.env
+.env.*
+!.env.example
