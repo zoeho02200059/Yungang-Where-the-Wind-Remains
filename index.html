@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#17110c">
+    <title>风过云冈</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="game" class="title-mode far" tabindex="0" aria-label="风过云冈互动叙事游戏">
+    <div id="world">
+        <img id="background" class="background-layer" alt="">
+        <img id="background-next" class="background-layer background-next" alt="">
+        <canvas id="erosion-canvas" class="hidden" width="1280" height="720" aria-hidden="true"></canvas>
+
+        <img id="mason-a" class="character" alt="石匠甲">
+        <img id="mason-b" class="character" alt="石匠乙">
+
+        <div id="instruments" class="hidden" aria-hidden="true">
+            <div id="pipa-target" class="instrument-target">
+                <img id="pipa" alt="曲项琵琶">
+                <span>曲颈琵琶</span>
+            </div>
+            <div id="bili-target" class="instrument-target">
+                <img id="bili" alt="觱篥">
+                <span>觱篥</span>
+            </div>
+        </div>
+
+        <div id="far-dialogue-a" class="far-dialogue far-dialogue-a" aria-live="polite"><span></span></div>
+        <div id="far-dialogue-b" class="far-dialogue far-dialogue-b" aria-live="polite"><span></span></div>
+    </div>
+
+    <canvas id="wind-canvas" width="1280" height="720" aria-hidden="true"></canvas>
+
+    <section id="title-screen" aria-label="标题页">
+        <div class="title-dim"></div>
+        <img id="title-art" src="assets/UI/title.png" alt="风过云冈。石上有声，风中留痕。轻触入梦。">
+        <span class="sr-only">轻触入梦</span>
+    </section>
+
+    <div id="scene-tip" class="prompt prompt-long hidden" role="status">
+        <span class="prompt-text"></span>
+    </div>
+
+    <section id="dialogue-box" class="hidden" aria-live="polite" aria-label="人物对话">
+        <div id="portrait-frame"><img id="portrait" alt=""></div>
+        <div id="dialogue-content">
+            <div id="speaker-name"></div>
+            <div id="dialogue-text"></div>
+            <div id="continue-mark" aria-hidden="true">◆</div>
+        </div>
+    </section>
+
+    <div id="ambient-text" class="hidden" aria-live="polite"></div>
+    <div id="center-text" class="hidden" aria-live="polite"></div>
+
+    <section id="study-dialogue" class="hidden" aria-live="polite" aria-label="游学团对话">
+        <div id="study-speaker"></div>
+        <div id="study-text"></div>
+        <div id="study-continue" aria-hidden="true">◆</div>
+    </section>
+
+    <section id="end-card" class="hidden" aria-label="结尾知识卡">
+        <div class="end-card-inner">
+            <p class="end-kicker">云冈石窟第十二窟</p>
+            <h1>音乐窟</h1>
+            <p>石窟中的伎乐雕刻保存了丰富的北魏音乐图像。来自不同地域的乐器、乐舞与艺术技法，在北魏平城汇聚、交流，并共同进入云冈的石壁。</p>
+            <p class="end-note">石上有声，风中留痕。</p>
+            <button id="restart-btn" type="button">再听一次</button>
+        </div>
+    </section>
+
+    <canvas id="eye-transition" class="hidden" width="1280" height="720" aria-hidden="true"></canvas>
+</main>
+
+<noscript>请启用 JavaScript 以进入《风过云冈》。</noscript>
+<script src="game.js"></script>
+</body>
+</html>

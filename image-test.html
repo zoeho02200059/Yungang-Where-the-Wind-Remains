@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>角色资源测试</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #888;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .row {
+            display: flex;
+            gap: 40px;
+            padding: 30px;
+            align-items: flex-end;
+        }
+
+        .test {
+            border: 4px solid red;
+            background: #ccc;
+            padding: 10px;
+        }
+
+        img {
+            display: block;
+            height: 600px;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>如果下面能看见甲乙，说明图片路径正常</h1>
+
+<div class="row">
+
+    <div class="test">
+        <p>石匠甲</p>
+
+        <img
+            src="assets/characters/mason_a/body/mason_a_breath_01.png"
+            alt="甲加载失败"
+        >
+    </div>
+
+
+    <div class="test">
+        <p>石匠乙</p>
+
+        <img
+            src="assets/characters/mason_b/body/mason_b_breath_01.png"
+            alt="乙加载失败"
+        >
+    </div>
+
+</div>
+
+</body>
+</html>
